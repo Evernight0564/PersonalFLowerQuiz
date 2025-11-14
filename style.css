@@ -1,0 +1,263 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #e8f5e9 50%, #fff8e1 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .language-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.9em;
+            color: #666;
+            transition: background 0.3s;
+        }
+
+        .language-toggle:hover {
+            background: #f0f0f0;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        
+        .flower-image {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        transition: transform 0.3s ease;
+        object-fit: cover; 
+        }
+        
+        /* Start Page */
+        .start-page {
+            text-align: center;
+        }
+
+        .flower-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .flower-img-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+     
+        background: #ffffff; 
+        border: 1px solid #f0e6f6;
+        border-radius: 10px; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+        overflow: hidden;
+        }
+
+        .flower-img-wrapper:hover .flower-image {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #9575cd;
+            margin: 30px 0;
+            line-height: 1.3;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #f8bbd0, #ce93d8);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+            box-shadow: 0 10px 30px rgba(206, 147, 216, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(206, 147, 216, 0.4);
+        }
+
+        /* Quiz Page */
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #f8bbd0, #ce93d8);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .question-container {
+            margin-bottom: 40px;
+        }
+
+        .question-number {
+            color: #9575cd;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 1.5em;
+            color: #5d4e6d;
+            margin-bottom: 30px;
+        }
+
+        .choices {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .choice {
+            background: white;
+            border: 2px solid #f0e6f6;
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-size: 1.1em;
+            color: #5d4e6d;
+        }
+
+        .choice:hover {
+            border-color: #ce93d8;
+            background: #fef5ff;
+            transform: translateX(10px);
+        }
+
+        .choice.selected {
+            background: linear-gradient(135deg, #f8bbd0, #ce93d8);
+            border-color: #ce93d8;
+            color: white;
+        }
+
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        .result-page {
+            text-align: center;
+        }
+
+        .flower-result-img img {
+        max-width: 150px; 
+        height: auto;
+        margin: 20px 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-flower-image { 
+         max-width: 150px; 
+        height: auto;
+        }
+
+        .result-title {
+            font-size: 2.5em;
+            color: #9575cd;
+            margin: 20px 0;
+        }
+
+        .result-subtitle {
+            font-size: 1.3em;
+            color: #ce93d8;
+            margin-bottom: 30px;
+        }
+
+        .result-description {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #5d4e6d;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .score-display {
+            background: #fef5ff;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            color: #9575cd;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .flower-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .question-text {
+                font-size: 1.2em;
+            }
+        }

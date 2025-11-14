@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="What Kind of Flower Are You?" data-th="ตัวตนของคุณเป็นดอกไม้ดอกไหนกัน?">What Kind of Flower Are You?</title>
+    
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<body>
+    <div class="container">
+        <button class="language-toggle" id="langToggle" onclick="toggleLanguage()">TH / EN</button>
+
+        <div class="page active" id="startPage">
+            <div class="start-page">
+                <div class="flower-grid">
+                    <div class="flower-img-wrapper"><img src="images/carnation.jpg" alt="Carnation" class="flower-image"></div>
+                    <div class="flower-img-wrapper"><img src="images/orchid.jpg" alt="Orchid" class="flower-image"></div>
+                    <div class="flower-img-wrapper"><img src="images/sunflower.jpg" alt="Sunflower" class="flower-image"></div>
+                    <div class="flower-img-wrapper"><img src="images/tulip.jpg" alt="Tulip" class="flower-image"></div>
+                    <div class="flower-img-wrapper"><img src="images/rose.jpg" alt="Rose" class="flower-image"></div>
+                    <div class="flower-img-wrapper"><img src="images/lily.jpg" alt="Lily" class="flower-image"></div>
+                    <div class="flower-img-wrapper"><img src="images/lavender.jpg" alt="Lavender" class="flower-image"></div>
+                    <div class="flower-img-wrapper"><img src="images/daisy.jpg" alt="Daisy" class="flower-image"></div>
+                </div>
+                <h1 data-en="What Kind of Flower Are You?" data-th="ตัวตนของคุณเป็นดอกไม้ดอกไหนกัน?" id="startTitle">What Kind of Flower Are You?</h1>
+                <button class="btn" onclick="startQuiz()" data-en="Let's Get Started" data-th="เริ่มสำรวจ">Let's Get Started</button>
+            </div>
+        </div>
+
+        <div class="page" id="quizPage">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="question-container" id="questionContainer"></div>
+            <div class="quiz-nav">
+                <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display: none;" data-en="Previous" data-th="ย้อนกลับ">Previous</button>
+                <button class="btn" id="nextBtn" onclick="nextQuestion()" data-en="Next" data-th="ถัดไป">Next</button>
+            </div>
+        </div>
+
+        <div class="page" id="resultPage">
+            <div class="result-page">
+                <div class="score-display" id="scoreDisplay"></div>
+                <div class="flower-result-img" id="resultImage"></div>
+                <h2 class="result-title" id="resultTitle"></h2>
+                <p class="result-subtitle" id="resultSubtitle"></p>
+                <p class="result-description" id="resultDescription"></p>
+                <button class="btn" onclick="restartQuiz()" data-en="Discover My Flower Again" data-th="ค้นหาตัวตนดอกไม้ของฉันอีกครั้ง">Discover My Flower Again</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
